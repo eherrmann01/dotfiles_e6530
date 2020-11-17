@@ -192,7 +192,7 @@ alias sr="sudo reboot"
 #config for git_dotfile_repo
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME' 
 
-# # ex = EXtractor for all kinds of archives
+# ex = EXtractor for all kinds of archives
 # # usage: ex <file>
 ex ()
 {
