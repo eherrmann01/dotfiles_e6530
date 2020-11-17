@@ -562,19 +562,20 @@ bindsym control+mod1+f exec --no-startup-id firefox;focus
 bindsym control+mod1+v exec --no-startup-id vivaldi-stable;focus
 bindsym control+mod1+g exec --no-startup-id chromium;focus
 
-#workspace 2 related
-#bindsym $mod+F2 exec --no-startup-id geany;focus
-bindsym $mod+F2 exec --no-startup-id atom;focus
+#Dolphin File Manager
+#workspace  3 @startup
+bindsym $mod+F2 exec --no-startup-id dolphin;focus
 
-#workspace 3 related
-bindsym $mod+F3 exec --no-startup-id inkscape;focus
+#Firefox
+#Workspace 1 @startup
+bindsym $mod+F3 exec --no-startup-id firefox;focus
 
-#workspace 4 related
-bindsym $mod+F4 exec --no-startup-id gimp;focus
+#Thunderbird Mail
+#workspace 2 @startup
+bindsym $mod+F4 exec --no-startup-id thunderbird;focus
 
-#workspace 5 related
-bindsym $mod+F5 exec --no-startup-id meld;focus
-bindsym control+mod1+i exec --no-startup-id nitrogen;focus
+#Code 
+bindsym $mod+F5 exec --no-startup-id gimp;focus
 
 #workspace 6 related
 bindsym $mod+F6 exec --no-startup-id vlc;focus
