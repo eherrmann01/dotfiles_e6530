@@ -14,6 +14,10 @@
 
 export HISTCONTROL=ignoreboth:erasedups
 
+#Change terminal editor to vim - EDH
+export VISUAL=vim
+export EDITOR=vim
+
 PS1='[\u@\h \W]\$ '
 
 if [ -d "$HOME/.bin" ] ;
