@@ -14,11 +14,9 @@
 
 export HISTCONTROL=ignoreboth:erasedups
 
-#Change terminal editor to vim - EDH
-export VISUAL=vim
-export EDITOR=vim
-
-PS1='[\u@\h \W]\$ '
+#PS1='[\u@\h \W]\$ ' - Original - EDH
+PS1='[\u@\h:$(pwd)]$ '
+#PS1='$(whoami)@$(hostname):$(pwd)$' - Not Quite Right - EDH
 
 if [ -d "$HOME/.bin" ] ;
   then PATH="$HOME/.bin:$PATH"
@@ -51,8 +49,46 @@ alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 
+########################################
+#Erik's custom aliases
+########################################
+
+#navigation
+alias ..='cd ..'
+alias ...='cd ../..'
+alias .3='../../..'
+alias .4='../../../..'
+alias .5='../../../../..' 
+
+#Change terminal editor to vim - EDH
+export VISUAL=vim
+export EDITOR=vim
+
+#process viewer
+alias bt="bashtop"
+
+#vi for vim
+alias vi="vim"
+
+# clear the screen
+alias cl="clear"
+
 #readable output
-alias df='df -h'
+alias df="df -h"
+
+#Safely copy files
+alias cp="cp -i"
+
+#Safely overwrite files
+alias mv="mv -i"
+
+#Safely delete files
+alias rm="rm -i"
+
+#config for git_dotfile_repo
+alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME' 
+
+########################################
 
 #pacman unlock
 alias unlock="sudo rm /var/lib/pacman/db.lck"
@@ -192,9 +228,6 @@ alias probe="sudo -E hw-probe -all -upload"
 #shutdown or reboot
 alias ssn="sudo shutdown now"
 alias sr="sudo reboot"
-
-#config for git_dotfile_repo
-alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME' 
 
 # ex = EXtractor for all kinds of archives
 # # usage: ex <file>
