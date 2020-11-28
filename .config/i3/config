@@ -68,7 +68,7 @@ set $right l
 #exec --no-startup-id xrandr --output DVI-I-0 --right-of HDMI-0 --auto
 #exec --no-startup-id xrandr --output DVI-1 --right-of DVI-0 --auto
 #exec --no-startup-id xrandr --output DVI-D-1 --right-of DVI-I-1 --auto
-exec --no-startup-id xrandr --output HDMI2 --right-of HDMI1 --auto
+exec --no-startup-id xrandr --output DisplayPort-2 --right-of HDMI-A-0 --auto
 
 
 # my current setup
@@ -86,18 +86,18 @@ exec --no-startup-id xrandr --output HDMI2 --right-of HDMI1 --auto
 #set $firstMonitor DVI-I-1
 #set $secondMonitor DVI-D-1
 
-set $firstMonitor HDMI1
-set $secondMonitor HDMI2
+set $firstMonitor DisplayPort-2
+set $secondMonitor HDMI-A-0
 
 workspace 1 output $firstMonitor
-workspace 2 output $firstMonitor
+workspace 2 output $secondMonitor
 workspace 3 output $firstMonitor
-workspace 4 output $firstMonitor
+workspace 4 output $secondMonitor
 workspace 5 output $firstMonitor
 workspace 6 output $secondMonitor
-workspace 7 output $secondMonitor
+workspace 7 output $firstMonitor
 workspace 8 output $secondMonitor
-workspace 9 output $secondMonitor
+workspace 9 output $firstMonitor
 workspace 10 output $secondMonitor
 
 # switch to workspace
@@ -131,7 +131,8 @@ bindsym $mod+Shift+0 move container to workspace 10; workspace 10
 #####################################################################################################################
 
 # start dmenu
-bindsym $mod+shift+d exec --no-startup-id dmenu_run -i -nb '#191919' -nf '#fea63c' -sb '#fea63c' -sf '#191919' -fn 'NotoMonoRegular:bold:pixelsize=14'
+#bindsym $mod+shift+d exec --no-startup-id dmenu_run -i -nb '#191919' -nf '#fea63c' -sb '#fea63c' -sf '#191919' -fn 'NotoMonoRegular:bold:pixelsize=14'
+bindsym $mod+shift+d exec --no-startup-id dmenu_run -i -nb '#191919' -nf '#5fb1ba' -sb '#5fb1ba' -sf '#191919' -fn 'NotoMonoRegular:bold:pixelsize=14'
 
 # gmrun
 bindsym mod1+F2 exec --no-startup-id gmrun
@@ -400,6 +401,12 @@ font pango:Noto Mono Regular 13
 #Start mail on ws2 - EDH
 exec --no-startup-id i3-msg 'workspace 2; exec /usr/bin/thunderbird'
 
+#Start SMS on ws2
+#exec --no-startup-id i3-msg 'workspace 2; exec /usr/bin/kdeconnect-sms'
+
+#Start Nitrogen
+exec --no-startup-id i3-msg exec 'nitrogen --restore'
+
 #Start browser on ws1 - EDH
 exec --no-startup-id i3-msg 'workspace 1; exec /usr/bin/firefox'
 
@@ -407,10 +414,10 @@ exec --no-startup-id i3-msg 'workspace 1; exec /usr/bin/firefox'
 exec --no-startup-id i3-msg 'workspace 1; exec /usr/bin/barrier'
 
 #Start Geany editor - EDH
-exec --no-startup-id i3-msg 'workspace 4; exec /usr/bin/geany'
+#exec --no-startup-id i3-msg 'workspace 4; exec /usr/bin/geany'
 
 # ArcoLinux Welcome App - EDH
-exec --no-startup-id dex $HOME/.config/autostart/arcolinux-welcome-app.desktop
+#exec --no-startup-id dex $HOME/.config/autostart/arcolinux-welcome-app.desktop
 
 # Autotiling
 exec_always --no-startup-id autotiling
@@ -424,8 +431,7 @@ exec_always --no-startup-id autotiling
 #exec --no-startup-id atom
 
 #file manager
-exec --no-startup-id i3-msg 'workspace 3; exec /usr/bin/dolphin'
-
+#exec --no-startup-id i3-msg 'workspace 3; exec /usr/bin/pcmanfm'
 #Mail clients
 #exec --no-startup-id mail  - 2
 
@@ -463,7 +469,7 @@ exec_always --no-startup-id numlockx on
 
 # volume
 #exec --no-startup-id pasystray
-exec --no-startup-id volumeicon
+#exec --no-startup-id volumeicon
 
 #variety
 #exec --no-startup-id variety
@@ -475,10 +481,16 @@ exec --no-startup-id xfce4-clipman
 #exec --no-startup-id conky -c ~/.config/i3/system-overview - EDH
 
 #feh sets wallpaper
-#exec --no-startup-id feh --bg-fill /usr/share/backgrounds/arcolinux/breakingofday-1920x1080.png & - EDH
+#exec --no-startup-id feh --bg-scale /usr/share/backgrounds/arcolinux/breakingofday-1920x1080.png & - EDH
 
 #Polybar
 exec_always --no-startup-id ~/.config/polybar/launch.sh &
+\
+#mousefix
+exec_always --no-startup-id ~/mousefix.sh &
+
+#Start SSH daemon - WIP
+#exec_always --no-startup-id ~/startssh.sh &
 
 #####################################################################################################################
 #################                                 system applications                               #################
@@ -508,7 +520,8 @@ bindsym control+mod1+Next exec --no-startup-id conky-rotate -n
 bindsym control+mod1+Prior exec --no-startup-id conky-rotate -p
 
 # terminal
-bindsym $mod+Return exec --no-startup-id termite;focus
+bindsym $mod+Return exec --no-startup-id xfce4-terminal;focus
+#bindsym $mod+Return exec --no-startup-id termite;focus
 bindsym $mod+KP_Enter exec --no-startup-id termite;focus
 bindsym control+mod1+t exec --no-startup-id termite; focus
 bindsym control+mod1+Return exec --no-startup-id termite; focus
@@ -552,19 +565,22 @@ bindsym control+mod1+p exec --no-startup-id pamac-manager
 #xkill
 bindsym --release $mod+Escape exec xkill
 
-#workspace related
+
+
+#####################################################################################################################
+#################                          Erik's custom keyboard shortcuts                          ################
+#####################################################################################################################
+
 
 #workspace 1 related
 bindsym $mod+F1 exec --no-startup-id exo-open --launch webbrowser;focus
 #qwerty/azerty conflict with w
 bindsym $mod+w exec --no-startup-id exo-open --launch webbrowser;focus
-bindsym control+mod1+f exec --no-startup-id firefox;focus
-bindsym control+mod1+v exec --no-startup-id vivaldi-stable;focus
 bindsym control+mod1+g exec --no-startup-id chromium;focus
 
-#Dolphin File Manager
+#Spacefm File Manager
 #workspace  3 @startup
-bindsym $mod+F2 exec --no-startup-id dolphin;focus
+bindsym $mod+F2 exec --no-startup-id spacefm;focus
 
 #Firefox
 #Workspace 1 @startup
@@ -574,32 +590,23 @@ bindsym $mod+F3 exec --no-startup-id firefox;focus
 #workspace 2 @startup
 bindsym $mod+F4 exec --no-startup-id thunderbird;focus
 
-#Code 
-bindsym $mod+F5 exec --no-startup-id gimp;focus
+#Darktable
+bindsym $mod+F5 exec --no-startup-id /usr/bin/darktable;focus
 
-#workspace 6 related
-bindsym $mod+F6 exec --no-startup-id vlc;focus
+#Gimp
+bindsym $mod+F6 exec --no-startup-id gimp;focus
 
-#workspace 7 related
-bindsym $mod+F7 exec --no-startup-id virtualbox;focus
+#VSCodium
+bindsym $mod+F7 exec --no-startup-id vscodium;focus
 
-#workspace 8 related
-for_window [class="Thunar"] focus
-bindsym $mod+F8 exec --no-startup-id thunar;focus
-bindsym $mod+Shift+Return exec --no-startup-id thunar;focus
-bindsym $mod+Shift+KP_Enter exec --no-startup-id thunar;focus
-bindsym control+mod1+b exec --no-startup-id thunar;focus
-
-#workspace 9 related
-bindsym $mod+F9 exec --no-startup-id evolution;focus
-#bindsym $mod+F9 exec --no-startup-id geary;focus
-#bindsym control+mod1+e exec --no-startup-id geary;focus
+#Geany
+bindsym $mod+F8 exec --no-startup-id geany;focus
 
 #workspace 10 related
 bindsym $mod+F10 exec --no-startup-id spotify;focus
-bindsym control+mod1+s exec --no-startup-id spotify;focus
 
-
+#Ranger terminal file browser
+bindsym $mod+mod1+r exec --no-startup-id termite -e "ranger";focus
 
 
 #####################################################################################################################
