@@ -399,7 +399,7 @@ font pango:Noto Mono Regular 13
 # USER APPLICATIONS TO START AT BOOT
 
 #Start mail on ws2 - EDH
-exec --no-startup-id i3-msg 'workspace 2; exec /usr/bin/thunderbird'
+exec --no-startup-id i3-msg 'workspace 1; exec /usr/bin/thunderbird'
 
 #Start SMS on ws2
 #exec --no-startup-id i3-msg 'workspace 2; exec /usr/bin/kdeconnect-sms'
@@ -408,10 +408,11 @@ exec --no-startup-id i3-msg 'workspace 2; exec /usr/bin/thunderbird'
 exec --no-startup-id i3-msg exec 'nitrogen --restore'
 
 #Start browser on ws1 - EDH
-exec --no-startup-id i3-msg 'workspace 1; exec /usr/bin/firefox'
+exec --no-startup-id i3-msg 'workspace 2; exec /usr/bin/firefox'
 
 #Start Barrier - EDH
-exec --no-startup-id i3-msg 'workspace 1; exec /usr/bin/barrier'
+#exec --no-startup-id i3-msg 'workspace 1; exec /usr/bin/barrier'
+exec --no-startup-id i3-msg 'exec /usr/bin/barrier'
 
 #Start Geany editor - EDH
 #exec --no-startup-id i3-msg 'workspace 4; exec /usr/bin/geany'
