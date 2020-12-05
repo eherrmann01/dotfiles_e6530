@@ -14,9 +14,24 @@
 
 export HISTCONTROL=ignoreboth:erasedups
 
+##### custom shell prompt #####
+
 #PS1='[\u@\h \W]\$ ' - Original - EDH
-PS1='[\u@\h:$(pwd)]$ '
-#PS1='$(whoami)@$(hostname):$(pwd)$' - Not Quite Right - EDH
+#PS1='[\u@\h:$(pwd)]$ ' - With full path
+#Colorized
+PS1='\e[0;31m[\u@\h:]\e[m \e[1;36m$(pwd) $\e[m '
+
+#Colors
+#Replace 0; with 1; to get lighter color
+#Black 0;30
+#Blue 0;34
+#Green 0;32
+#Cyan 0;36
+#Red 0;31
+#Purple 0;35
+#Brown 0;33
+
+###############################
 
 if [ -d "$HOME/.bin" ] ;
   then PATH="$HOME/.bin:$PATH"
@@ -30,13 +45,12 @@ fi
 bind "set completion-ignore-case on"
 
 #list
-alias ls='exa -al --color=always --group-directories-first'
+alias ls='exa -al --color=always --group-directories-first | more'
 #alias ls='ls --color=auto'
 alias la='ls -a'
-alias ll='ls -la'
+alias ll='ls -lah'
 alias l='ls'
 alias l.="ls -A | egrep '^\.'"
-
 #fix obvious typo's
 alias cd..='cd ..'
 alias pdw="pwd"
@@ -61,6 +75,9 @@ alias .3='../../..'
 alias .4='../../../..'
 alias .5='../../../../..' 
 
+#Update system
+alias update="pacman -Syu" 
+
 #Change terminal editor to vim - EDH
 export VISUAL=vim
 export EDITOR=vim
@@ -71,7 +88,7 @@ alias bt="bashtop"
 #vi for vim
 alias vi="vim"
 
-# clear the screen
+#clear the screen
 alias cl="clear"
 
 #readable output
@@ -85,6 +102,8 @@ alias mv="mv -i"
 
 #Safely delete files
 alias rm="rm -i"
+
+alias calc="galculator"
 
 #config for git_dotfile_repo
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME' 
