@@ -19,7 +19,7 @@ export HISTCONTROL=ignoreboth:erasedups
 #PS1='[\u@\h \W]\$ ' - Original - EDH
 #PS1='[\u@\h:$(pwd)]$ ' - With full path
 #Colorized
-PS1='\e[0;31m[\u@\h:]\e[m \e[1;36m$(pwd) $\e[m '
+PS1='\e[0;33m[\u@\h:]\e[m \e[1;36m$(pwd) $\e[m '
 
 #Colors
 #Replace 0; with 1; to get lighter color
