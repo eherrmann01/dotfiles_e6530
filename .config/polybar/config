@@ -120,7 +120,7 @@ font-2 = "Noto Sans:size=10;0"
 font-3 = "Noto Sans Mono:size=10;0"
 
 modules-left = i3 xwindow -EDH
-modules-center = date
+modules-center = date weather
 ;modules-right = networkspeedup networkspeeddown memory2 cpu2 volume 
 modules-right = volume 
 separator = //
@@ -964,8 +964,8 @@ fuzzy-match = false
 ;http://fontawesome.io/cheatsheet/
 ;       v        
 
-ws-icon-0 = 1;
-ws-icon-1 = 2;
+ws-icon-0 = 1;
+ws-icon-1 = 2;
 ws-icon-2 = 3;
 ws-icon-3 = 4;
 ws-icon-4 = 5;
@@ -1851,7 +1851,7 @@ interval = 10
 format = <label>
 format-prefix = " "
 format-prefix-foreground = #3EC13F
-format-underline = #3EC13F
+format-underline = #002f343f
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 exec = python -u ~/.config/polybar/scripts/weather.py
