@@ -1,4 +1,3 @@
-#
 # ~/.bashrc
 #
 #
@@ -19,7 +18,7 @@ export HISTCONTROL=ignoreboth:erasedups
 #PS1='[\u@\h \W]\$ ' - Original - EDH
 #PS1='[\u@\h:$(pwd)]$ ' - With full path
 #Colorized
-PS1='\e[0;33m[\u@\h:]\e[m \e[1;36m$(pwd) $\e[m '
+PS1='\e[0;32m[\u@\h:]\e[m \e[0;36m$(pwd) $\e[m '
 
 #Colors
 #Replace 0; with 1; to get lighter color
@@ -33,6 +32,8 @@ PS1='\e[0;33m[\u@\h:]\e[m \e[1;36m$(pwd) $\e[m '
 
 ###############################
 
+
+set number=relative
 if [ -d "$HOME/.bin" ] ;
   then PATH="$HOME/.bin:$PATH"
 fi
@@ -107,6 +108,12 @@ alias calc="galculator"
 
 #config for git_dotfile_repo
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME' 
+
+#ranger
+alias fm="ranger"
+
+#exit terminal
+alias ':q'='exit'
 
 ########################################
 
