@@ -1,4 +1,4 @@
-set relativenumber
+set number relativenumber
 syntax on
 set tabstop=4 softtabstop=4
 set shiftwidth=4
@@ -13,7 +13,8 @@ set nobackup
 set undodir=~/.vim/undodir
 set undofile
 set incsearch
-
+set path+=**
+set hidden
 "set colorcolumn=80
 "highlight ColorColumn ctermbg=4  
 nmap <F6> :NERDTreeToggle<CR>
@@ -37,6 +38,9 @@ hi User5 ctermfg=15 ctermbg=4
 
 call plug#begin('~/.vim/plugged')  
 Plug 'tpope/vim-sensible'
-Plug 'junegunn/seoul256.vim'
-Plug 'git@github.com:Valloric/YouCompleteMe.git'
+Plug 'junegunn/seoul256.vim' 
+Plug 'junegunn/goyo.vim' 
+Plug 'PotatoesMaster/i3-vim-syntax'
+Plug 'Valloric/YouCompleteMe'
+Plug 'mattn/emmet-vim'
 call plug#end()

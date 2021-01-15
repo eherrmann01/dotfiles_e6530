@@ -132,7 +132,7 @@ bindsym $mod+Shift+0 move container to workspace 10; workspace 10
 
 # start dmenu
 #bindsym $mod+shift+d exec --no-startup-id dmenu_run -i -nb '#191919' -nf '#fea63c' -sb '#fea63c' -sf '#191919' -fn 'NotoMonoRegular:bold:pixelsize=14'
-bindsym $mod+shift+d exec --no-startup-id dmenu_run -i -nb '#191919' -nf '#5fb1ba' -sb '#5fb1ba' -sf '#191919' -fn 'NotoMonoRegular:bold:pixelsize=14'
+bindsym $mod+d exec --no-startup-id dmenu_run -i -nb '#191919' -nf '#5fb1ba' -sb '#5fb1ba' -sf '#191919' -fn 'NotoMonoRegular:bold:pixelsize=14'
 
 # gmrun
 bindsym mod1+F2 exec --no-startup-id gmrun
@@ -488,7 +488,7 @@ exec --no-startup-id xfce4-clipman
 
 #Polybar
 exec_always --no-startup-id ~/.config/polybar/launch.sh &
-\
+
 #mousefix
 exec_always --no-startup-id ~/mousefix.sh &
 
@@ -583,11 +583,11 @@ bindsym control+mod1+g exec --no-startup-id chromium;focus
 
 #Spacefm File Manager
 #workspace  3 @startup
-bindsym $mod+F2 exec --no-startup-id dolphin;focus
+bindsym $mod+F2 exec --no-startup-id pcmanfm;focus
 
 #Firefox
 #Workspace 1 @startup
-bindsym $mod+F3 exec --no-startup-id firefox;focus
+bindsym $mod+F3 exec --no-startup-id brave;focus
 
 #Thunderbird Mail
 #workspace 2 @startup
@@ -611,6 +611,8 @@ bindsym $mod+F10 exec --no-startup-id spotify;focus
 #Ranger terminal file browser
 bindsym $mod+mod1+r exec --no-startup-id termite -e "ranger";focus
 
+#Xmenu
+bindsym $mod+Control+z exec --no-startup-id ~/bin/xmenu/xmenu.sh
 
 #####################################################################################################################
 #################                          screenshots                                              #################

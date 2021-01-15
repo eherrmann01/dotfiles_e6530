@@ -46,7 +46,7 @@ fi
 bind "set completion-ignore-case on"
 
 #list
-alias ls='exa -al --color=always --group-directories-first | more'
+alias ls='exa -al --color=always --group-directories-first'
 #alias ls='ls --color=auto'
 alias la='ls -a'
 alias ll='ls -lah'
@@ -107,7 +107,7 @@ alias rm="rm -i"
 alias calc="galculator"
 
 #config for git_dotfile_repo
-alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME' 
+alias gitb='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME' 
 
 #ranger
 alias fm="ranger"
