@@ -408,11 +408,14 @@ exec --no-startup-id i3-msg 'workspace 1; exec /usr/bin/thunderbird'
 exec --no-startup-id i3-msg exec 'nitrogen --restore'
 
 #Start browser on ws1 - EDH
-exec --no-startup-id i3-msg 'workspace 2; exec /usr/bin/firefox'
+#exec --no-startup-id i3-msg 'workspace 2; exec /usr/bin/firefox'
 
 #Start Barrier - EDH
 #exec --no-startup-id i3-msg 'workspace 1; exec /usr/bin/barrier'
 exec --no-startup-id i3-msg 'exec /usr/bin/barrier'
+
+#Start Protonmail-Bridge - EDH
+exec --no-startup-id i3-msg 'exec /usr/bin/protonmail-bridge'
 
 #Start Geany editor - EDH
 #exec --no-startup-id i3-msg 'workspace 4; exec /usr/bin/geany'
@@ -424,7 +427,7 @@ exec --no-startup-id i3-msg 'exec /usr/bin/barrier'
 exec_always --no-startup-id autotiling
 
 # Redshift Screen temprature control
-exec_always --no-startup-id redshift-gtk
+#exec_always --no-startup-id redshift-gtk
 
 #exec --no-startup-id vivaldi-stable
 #for_window [class="Vivaldi-stable"] focus - EDH
@@ -471,7 +474,7 @@ exec_always --no-startup-id numlockx on
 #exec --no-startup-id insync start
 
 # volume
-#exec --no-startup-id pasystray
+exec_always --no-startup-id /usr/bin/pasystray
 #exec --no-startup-id volumeicon
 
 #variety
@@ -479,6 +482,9 @@ exec_always --no-startup-id numlockx on
 
 # clipman
 exec --no-startup-id xfce4-clipman
+
+# protonmail
+#exec_always --no-startup-id protonmail-bridge
 
 #Conky
 #exec --no-startup-id conky -c ~/.config/i3/system-overview - EDH
@@ -492,8 +498,9 @@ exec_always --no-startup-id ~/.config/polybar/launch.sh &
 #mousefix
 exec_always --no-startup-id ~/mousefix.sh &
 
-#Start SSH daemon - WIP
-#exec_always --no-startup-id ~/startssh.sh &
+#redshift
+exec_always --no-startup-id ~/bin/run_scripts/nightrc
+
 
 #####################################################################################################################
 #################                                 system applications                               #################
@@ -524,7 +531,7 @@ bindsym control+mod1+Prior exec --no-startup-id conky-rotate -p
 
 # terminal
 #bindsym $mod+Return exec --no-startup-id xfce4-terminal;focus
-bindsym $mod+Return exec --no-startup-id termite;focus
+bindsym $mod+Return exec --no-startup-id alacritty;focus
 bindsym $mod+KP_Enter exec --no-startup-id termite;focus
 bindsym control+mod1+t exec --no-startup-id termite; focus
 bindsym control+mod1+Return exec --no-startup-id termite; focus
@@ -578,16 +585,16 @@ bindsym --release $mod+Escape exec xkill
 #workspace 1 related
 bindsym $mod+F1 exec --no-startup-id exo-open --launch webbrowser;focus
 #qwerty/azerty conflict with w
-bindsym $mod+w exec --no-startup-id exo-open --launch webbrowser;focus
+bindsym $mod+w exec --no-startup-id brave;focus
 bindsym control+mod1+g exec --no-startup-id chromium;focus
 
 #Spacefm File Manager
 #workspace  3 @startup
-bindsym $mod+F2 exec --no-startup-id pcmanfm;focus
+bindsym $mod+F2 exec --no-startup-id dolphin;focus
 
 #Firefox
 #Workspace 1 @startup
-bindsym $mod+F3 exec --no-startup-id brave;focus
+bindsym $mod+F3 exec --no-startup-id firefox;focus
 
 #Thunderbird Mail
 #workspace 2 @startup
@@ -797,9 +804,7 @@ new_float normal
 #new_float none
 
 
-
-
-#####################################################################################################################
+######################################0##############################################################################
 #################                          Popups  control                                          #################
 #####################################################################################################################
 
@@ -897,7 +902,8 @@ bindsym control+mod1+o exec --no-startup-id ~/.config/i3/scripts/picom-toggle.sh
 
     # Window color settings
     # class                 border  backgr. text    indicator
-    client.focused          #3c5bcb #3c5bcb #dddddd #3c5bcb
+    #client.focused          #3c5bcb #3c5bcb #dddddd #3c5bcb
+    client.focused          #eeae0a #eeae0a #dddddd #3c5bcb
     client.unfocused        #000000 #000000 #555555 #292d2e
     client.focused_inactive #000000 #000000 #555555 #292d2e
     client.placeholder      #000000 #000000 #555555 #292d2e

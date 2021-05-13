@@ -40,7 +40,8 @@ format-offset =
 
 [colors]
 ; Nord theme ============
-;background = #2F343F - Line below makes Polybar transparent - EDH
+;background = #2F343F
+;Line below makes Polybar transparent - EDH
 background = #002F343F
 foreground = #f3f4f5
 alert = #d08770
@@ -122,7 +123,7 @@ font-3 = "Noto Sans Mono:size=10;0"
 modules-left = i3 xwindow -EDH
 modules-center = date weather
 ;modules-right = networkspeedup networkspeeddown memory2 cpu2 volume 
-modules-right = volume 
+;modules-right = volume 
 separator = //
 
 ;dim-value = 1.0
@@ -964,17 +965,17 @@ fuzzy-match = false
 ;http://fontawesome.io/cheatsheet/
 ;       v        
 
-ws-icon-0 = 1;
-ws-icon-1 = 2;
-ws-icon-2 = 3;
-ws-icon-3 = 4;
-ws-icon-4 = 5;
-ws-icon-5 = 6;
-ws-icon-6 = 7;
-ws-icon-7 = 8;
-ws-icon-8 = 9;
-ws-icon-9 = 10;
-ws-icon-default = " "
+;ws-icon-0 = 1;
+;ws-icon-1 = 2;
+;ws-icon-2 = 3;
+;ws-icon-3 = 4;
+;ws-icon-4 = 5;
+;ws-icon-5 = 6;
+;ws-icon-6 = 7;
+;ws-icon-7 = 8;
+;ws-icon-8 = 9;
+;ws-icon-9 = 10;
+;ws-icon-default = " "
 
 ; Available tags:
 ;   <label-state> (default) - gets replaced with <label-(focused|unfocused|visible|urgent)>

@@ -15,7 +15,7 @@ conky.config = {
 
 	--Various settings
 
-	background = false, 							-- forked to background
+	background = true, 							-- forked to background
 	cpu_avg_samples = 2,						-- The number of samples to average for CPU monitoring.
 	diskio_avg_samples = 10,					-- The number of samples to average for disk I/O monitoring.
 	double_buffer = true,						-- Use the Xdbe extension? (eliminates flicker)
@@ -112,8 +112,8 @@ conky.text = [[
 ${color1}${alignc}S Y S T E M    I N F O${color}
 ${color1}${hr}${color}
 ${color1}Host:${alignr}${color2}${nodename}${color}
-#${color1}Kernel:${color2}${alignr}$kernel${color}
-#${color1}Uptime:${color2}${alignr}${uptime}${color}
+${color1}Kernel:${color2}${alignr}$kernel${color}
+${color1}Uptime:${color2}${alignr}${uptime}${color}
 #${color1}UTC:${color2}${alignr}${utime %H:%M}${color}
 
 ${color1}${goto 60}Used${alignr}Size${color}
@@ -131,23 +131,26 @@ ${else}${cpu cpu0}${endif}${endif}%${alignr}${freq_g}${color}
 
 ${color1}${alignc}S H O R T C U T    K E Y S${color}
 ${color1}${hr}${color}
-${color1}[S]+Space (OB)${alignr}${color2}Main Menu${color}
-${color1}[Alt]+F2${alignr}${color2}Alt Menu${color}
-${color1}[Alt]+F3${alignr}${color2}Alt Menu${color}
-${color1}[S]+[Shift]+D${alignr}${color2}Alt Menu${color}
+#${color1}[S]+Space (OB)${alignr}${color2}Main Menu${color}
+${color1}[Alt]+F2${alignr}${color2}Run Prompt${color}
+${color1}[Alt]+F3${alignr}${color2}Application Finder${color}
+${color1}[Mod]+D${alignr}${color2}Dmenu${color}
 #${color1}[S] + Tab${alignr}${color2}Client Menu${color}
 ${color1}${hr}${color}
-${color1}[S]+t${alignr}${color2}Terminal${color}
-${color1}[S]+f${alignr}${color2}File Manager${color}
-${color1}[S]+e${alignr}${color2}Editor${color}
-${color1}[S]+m${alignr}${color2}Media Player${color}
-${color1}[S]+w${alignr}${color2}Web Browser${color}
-${color1}[S]+h${alignr}${color2}Task Manager${color}
-${color1}[S]+v${alignr}${color2}Volume Control${color}
+${color1}[Mod]+[enter]${alignr}${color2}Terminal${color}
+${color1}[Mod]+f${alignr}${color2}Fullscreen${color}
+${color1}[Mod]+[Ctrl]+z${alignr}${color2}App Menu${color}
+${color1}[Mod]+w${alignr}${color2}Defaullt Web Browser${color}
+${color1}[Mod]+f1${alignr}${color2}Firefox Browser${color}
+${color1}[Mod]+f2${alignr}${color2}File Manager${color}
+${color1}[Mod]+f3${alignr}${color2}Brave Browser${color}
+${color1}[Mod]+f4${alignr}${color2}Mail Client${color}
+${color1}[Mod]+f5${alignr}${color2}Darktable${color}
+${color1}[Mod]+f6${alignr}${color2}Gimp${color}
 ${color1}[PrtSc]${alignr}${color2}Screenshot${color}
 ${color1}[Ctrl]+[Alt]+m${alignr}${color2}Settings${color}
-${color1}[S]+Esc${alignr}${color2}Kill${color}
-${color1}[S]+x${alignr}${color2}Exit${color}
+${color1}[Mod]+Esc${alignr}${color2}Kill${color}
+${color1}[Mod]+x${alignr}${color2}Exit${color}
 ${color1}${hr}${color}
 ${color1}${execi 6000 lsb_release -d | grep 'Descr'|awk {'print $2 " " $3" " $4" " $5'}}${alignr}${execi 6000 lsb_release -a | grep 'Release'|awk {'print $2""$3""$4""$5'}}${color}
 ]];
