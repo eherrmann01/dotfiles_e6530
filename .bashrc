@@ -1,24 +1,34 @@
+#   ______      _ _      _____     _    _                                               _____      
+#  |  ____|    (_) |    |  __ \   | |  | |                                             / ____|     
+#  | |__   _ __ _| | __ | |  | |  | |__| | ___ _ __ _ __ _ __ ___   __ _ _ __  _ __   | (___  _ __ 
+#  |  __| | '__| | |/ / | |  | |  |  __  |/ _ \ '__| '__| '_ ` _ \ / _` | '_ \| '_ \   \___ \| '__|
+#  | |____| |  | |   <  | |__| |  | |  | |  __/ |  | |  | | | | | | (_| | | | | | | |  ____) | |_  
+#  |______|_|  |_|_|\_\ |_____(_) |_|  |_|\___|_|  |_|  |_| |_| |_|\__,_|_| |_|_| |_| |_____/|_(_) 
+                                                                                                 
+# Bashrc configuration file, updated 05/16/2021
+
 # ~/.bashrc
-#
-#
-#Ibus settings if you need them
-#type ibus-setup in terminal to change settings and start the daemon
-#delete the hashtags of the next lines and restart
-#export GTK_IM_MODULE=ibus
-#export XMODIFIERS=@im=dbus
-#export QT_IM_MODULE=ibus
+# Ibus settings if you need them
+# type ibus-setup in terminal to change settings and start the daemon
+# delete the hashtags of the next lines and restart
+# export GTK_IM_MODULE=ibus
+# export XMODIFIERS=@im=dbus
+# export QT_IM_MODULE=ibus
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
 export HISTCONTROL=ignoreboth:erasedups
+export VISUAL=vim;
+export EDITOR=vim;
 
 ##### custom shell prompt #####
 
 #PS1='[\u@\h \W]\$ ' - Original - EDH
 #PS1='[\u@\h:$(pwd)]$ ' - With full path
 #Colorized
-PS1='\e[0;32m[\u@\h:]\e[m \e[0;36m$(pwd) $\e[m '
+#PS1='\e[0;32m[\u@\h:]\e[m \e[0;36m$(pwd) $\e[m '
+PS1='\e[@\h:$(pwd) $\e[m '
 
 #Colors
 #Replace 0; with 1; to get lighter color
@@ -32,6 +42,7 @@ PS1='\e[0;32m[\u@\h:]\e[m \e[0;36m$(pwd) $\e[m '
 
 ###############################
 
+
 set number=relative
 if [ -d "$HOME/.bin" ] ;
   then PATH="$HOME/.bin:$PATH"
@@ -44,83 +55,6 @@ fi
 #ignore upper and lowercase when TAB completion
 bind "set completion-ignore-case on"
 
-#list
-alias ls='exa -al --color=always --group-directories-first'
-#alias ls='ls --color=auto'
-alias la='ls -a'
-alias ll='ls -lah'
-alias l='ls'
-alias l.="ls -A | egrep '^\.'"
-#fix obvious typo's
-alias cd..='cd ..'
-alias pdw="pwd"
-alias udpate='sudo pacman -Syyu'
-alias upate='sudo pacman -Syyu'
-alias updte='sudo pacman -Syyu'
-alias updqte='sudo pacman -Syyu'
-
-## Colorize the grep command output for ease of use (good for log files)##
-alias grep='grep --color=auto'
-alias egrep='egrep --color=auto'
-alias fgrep='fgrep --color=auto'
-
-########################################
-#Erik's custom aliases
-########################################
-
-#navigation
-alias ..='cd ..'
-alias ...='cd ../..'
-alias .3='../../..'
-alias .4='../../../..'
-alias .5='../../../../..' 
-
-#Update system
-alias update="pacman -Syu" 
-
-#Change terminal editor to vim - EDH
-export VISUAL=vim
-export EDITOR=vim
-
-#process viewer
-alias bt="bashtop"
-
-#vi for vim
-alias vi="vim"
-
-#clear the screen
-alias cl="clear"
-
-#readable output
-alias df="df -h"
-
-#Safely copy files
-alias cp="cp -i"
-
-#Safely overwrite files
-alias mv="mv -i"
-
-#Safely delete files
-alias rm="rm -i"
-
-alias calc="galculator"
-
-#config for git_dotfile_repo
-alias gitb='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME' 
-
-#ranger
-alias fm="ranger"
-
-#Redshift
-alias night="redshift-gtk -l 30.47741:-90.96232 &"
-
-#exit terminal
-alias ':q'='exit'
-
-#Set random wallpaper
-alias 'paper'='wal -qei ~/Pictures/wallpaper'
-
-########################################
 
 #pacman unlock
 alias unlock="sudo rm /var/lib/pacman/db.lck"
@@ -176,6 +110,7 @@ alias cb='sudo cp /etc/skel/.bashrc ~/.bashrc && source ~/.bashrc'
 #switch between bash and zsh
 alias tobash="sudo chsh $USER -s /bin/bash && echo 'Now log out.'"
 alias tozsh="sudo chsh $USER -s /bin/zsh && echo 'Now log out.'"
+alias tofish="sudo chsh $USER -s /bin/fish && echo 'Now log out.'"
 
 #quickly kill conkies
 alias kc='killall conky'
@@ -207,27 +142,6 @@ shopt -s dotglob
 shopt -s histappend # do not overwrite history
 shopt -s expand_aliases # expand aliases
 
-#youtube-dl
-alias yta-aac="youtube-dl --extract-audio --audio-format aac "
-alias yta-best="youtube-dl --extract-audio --audio-format best "
-alias yta-flac="youtube-dl --extract-audio --audio-format flac "
-alias yta-m4a="youtube-dl --extract-audio --audio-format m4a "
-alias yta-mp3="youtube-dl --extract-audio --audio-format mp3 "
-alias yta-opus="youtube-dl --extract-audio --audio-format opus "
-alias yta-vorbis="youtube-dl --extract-audio --audio-format vorbis "
-alias yta-wav="youtube-dl --extract-audio --audio-format wav "
-
-alias ytv-best="youtube-dl -f bestvideo+bestaudio "
-
-#Recent Installed Packages
-alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl"
-alias riplong="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -3000 | nl"
-
-#iso and version used to install ArcoLinux
-alias iso="cat /etc/dev-rel | awk -F '=' '/ISO/ {print $2}'"
-
-#Cleanup orphaned packages
-alias cleanup='sudo pacman -Rns $(pacman -Qtdq)'
 
 #get the error messages from journalctl
 alias jctl="journalctl -p 3 -xb"
@@ -291,8 +205,8 @@ ex ()
 #create a file called .bashrc-personal and put all your personal aliases
 #in there. They will not be overwritten by skel.
 
-[[ -f ~/.bashrc-personal ]] && . ~/.bashrc-personal
+[[ -f ~/.bash_aliases ]] && . ~/.bash_aliases
 
-(cat ~/.cache/wal/sequences &)
+#(cat ~/.cache/wal/sequences &)
 neofetch
 set -o vi
