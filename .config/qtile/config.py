@@ -5,7 +5,7 @@
 # | |____| |  | |   <  | |__| |  | |  | |  __/ |  | |  | | | | | | (_| | | | | | | |  ____) | |_
 # |______|_|  |_|_|\_\ |_____(_) |_|  |_|\___|_|  |_|  |_| |_| |_|\__,_|_| |_|_| |_| |_____/|_(_)
 
-# Qtile configuration file for erik-e6530 - updated 06/17/2021
+# Qtile configuration file for erik-e6530 - updated 07/04/2021
 
 import os
 import re
@@ -13,7 +13,7 @@ import socket
 import subprocess
 from libqtile.config import Drag, Key, Screen, Group, Drag, Click, Rule
 from libqtile.command import lazy
-from libqtile import layout, bar, widget, hook
+from libqtile import qtile, layout, bar, widget, hook
 from libqtile.widget import Spacer
 #import arcobattery
 
@@ -21,6 +21,7 @@ from libqtile.widget import Spacer
 mod = "mod4"
 mod1 = "alt"
 mod2 = "control"
+myTerm = "alacritty"
 home = os.path.expanduser('~')
 
 
@@ -265,8 +266,8 @@ for i in groups:
 def init_layout_theme():
     return {"margin":5,
             "border_width":2,
-#            "border_focus": "#5e81ac",
-            "border_focus": "#cd1f3f",
+            "border_focus": "#5e81ac",
+#            "border_focus": "#cd1f3f",
             "border_normal": "#4c566a"
             }
 
@@ -348,8 +349,23 @@ def init_widgets_list():
                         ),
                widget.WindowName(font="Noto Sans",
                         fontsize = 16,
+                        padding = 400,
                         foreground = colors[3],
                         background = colors[1],
+                        ),
+               widget.CheckUpdates(
+                       update_interval = 1800,
+                       distro = "Arch_checkupdates",
+                       display_format = "{updates} Updates",
+                       foreground = colors[3],
+                       mouse_callbacks = {'Button1': lambda: qtile.cmd_spawn(myTerm + ' -e sudo pacman -Syu')},
+                       background = colors[1]
+                       ),
+               widget.Sep(
+                        linewidth = 1,
+                        padding = 10,
+                        foreground = colors[2],
+                        background = colors[1]
                         ),
                widget.Clock(
                         foreground = colors[3],
@@ -366,7 +382,7 @@ def init_widgets_list():
                widget.Systray(
                         background=colors[1],
                         icon_size=20,
-                        padding = 4
+                        padding = 6
                         ),
               ]
     return widgets_list
@@ -446,6 +462,7 @@ floating_layout = layout.Floating(float_rules=[
     {'wmclass': 'Galculator'},
     {'wmclass': 'arcolinux-logout'},
     {'wmclass': 'xfce4-terminal'},
+    {'wmclass': 'redshift-gtk'},
     {'wname': 'branchdialog'},
     {'wname': 'Open File'},
     {'wname': 'pinentry'},
