@@ -52,7 +52,7 @@ keys = [
     Key([mod], "r", lazy.spawn('rofi-theme-selector')),
     Key([mod], "t", lazy.spawn('urxvt')),
     Key([mod], "v", lazy.spawn('pavucontrol')),
-    Key([mod], "w", lazy.spawn('brave')),
+    Key([mod], "w", lazy.spawn('firejail brave')),
     Key([mod], "x", lazy.spawn('arcolinux-logout')),
     Key([mod], "Escape", lazy.spawn('xkill')),
     Key([mod], "Return", lazy.spawn('alacritty')),
@@ -357,9 +357,9 @@ def init_widgets_list():
                        update_interval = 1800,
                        distro = "Arch_checkupdates",
                        display_format = "{updates} Updates",
-                       foreground = colors[3],
+                       foreground = colors[6],
+                       background = colors[1],
                        mouse_callbacks = {'Button1': lambda: qtile.cmd_spawn(myTerm + ' -e sudo pacman -Syu')},
-                       background = colors[1]
                        ),
                widget.Sep(
                         linewidth = 1,
