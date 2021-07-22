@@ -5,7 +5,7 @@
 # | |____| |  | |   <  | |__| |  | |  | |  __/ |  | |  | | | | | | (_| | | | | | | |  ____) | |_
 # |______|_|  |_|_|\_\ |_____(_) |_|  |_|\___|_|  |_|  |_| |_| |_|\__,_|_| |_|_| |_| |_____/|_(_)
 
-# Qtile configuration file for erik-e6530 - updated 07/04/2021
+# Qtile configuration file - updated 07/21/2021
 
 import os
 import re
@@ -58,7 +58,7 @@ keys = [
     Key([mod], "Return", lazy.spawn('alacritty')),
     Key([mod], "KP_Enter", lazy.spawn('alacritty')),
     Key([mod], "F1", lazy.spawn('firefox')),
-    Key([mod], "F2", lazy.spawn('dolphin')),
+    Key([mod], "F2", lazy.spawn('thunar')),
     Key([mod], "F3", lazy.spawn('brave')),
     Key([mod], "F4", lazy.spawn('thunderbird')),
     Key([mod], "F5", lazy.spawn('darktable')),
@@ -150,13 +150,20 @@ keys = [
 # CHANGE FOCUS
     Key([mod], "Up", lazy.layout.up()),
     Key([mod], "Down", lazy.layout.down()),
-    Key([mod], "Left", lazy.layout.left()),
-    Key([mod], "Right", lazy.layout.right()),
+#    Key([mod], "Left", lazy.layout.left()),
+#    Key([mod], "Right", lazy.layout.right()),
     Key([mod], "k", lazy.layout.up()),
     Key([mod], "j", lazy.layout.down()),
     Key([mod], "h", lazy.layout.left()),
     Key([mod], "l", lazy.layout.right()),
 
+# FOCUS SCREEN
+    Key([mod], "Left",
+        lazy.to_screen(1),
+        ),
+    Key([mod], "Right",
+        lazy.to_screen(0),
+        ),
 
 # RESIZE UP, DOWN, LEFT, RIGHT
     Key([mod, "control"], "l",
@@ -236,7 +243,7 @@ group_names = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0",]
 group_labels = ["1 ", "2 ", "3 ", "4 ", "5 ", "6 ", "7 ", "8 ", "9 ", "0",]
 #group_labels = ["", "", "", "", "", "", "", "", "", "",]
 #group_labels = ["Web", "Edit/chat", "Image", "Gimp", "Meld", "Video", "Vb", "Files", "Mail", "Music",]
-group_layouts = ["Monadtall", "Monadtall", "Monadtall", "Monadtall", "Monadtall", "Monadtall", "Monadtall", "Monadtall", "Monadtall", "monadtall",]
+group_layouts = ["Monadtall", "Monadtall", "Monadtall", "Monadtall", "Monadtall", "Monadtall", "Monadtall", "Monadtall", "Monadtall", "Monadtall",]
 #group_layouts = ["monadtall", "matrix", "monadtall", "bsp", "monadtall", "matrix", "monadtall", "bsp", "monadtall", "monadtall",]
 
 for i in range(len(group_names)):
@@ -312,16 +319,16 @@ widget_defaults = init_widgets_defaults()
 def init_widgets_list():
     prompt = "{0}@{1}: ".format(os.environ["USER"], socket.gethostname())
     widgets_list = [
-               widget.GroupBox(font="FontAwesome",
-                        fontsize = 16,
+               widget.GroupBox(font="ubuntu mono italic",
+                        fontsize = 18,
                         margin_y = 1,
-                        margin_x = 4,
+                        margin_x = 2,
                         padding_y = 0,
                         padding_x = 5,
                         borderwidth = 0,
                         disable_drag = True,
                         active = colors[6],
-                        inactive = colors[5],
+                        inactive = colors[3],
                         rounded = False,
                         highlight_method = "text",
                         this_current_screen_border = colors[4],
@@ -334,27 +341,27 @@ def init_widgets_list():
                         foreground = colors[2],
                         background = colors[1]
                         ),
-               widget.CurrentLayout(
-                        font = "Noto Sans",
-                        fontsize = 16,
-                        padding_y = -5,
-                        foreground = colors[3],
-                        background = colors[1]
-                        ),
-               widget.Sep(
-                        linewidth = 1,
-                        padding = 10,
-                        foreground = colors[2],
-                        background = colors[1]
-                        ),
-               widget.WindowName(font="Noto Sans",
-                        fontsize = 16,
+#               widget.CurrentLayout(
+#                        font = "Noto Sans",
+#                        fontsize = 16,
+#                        padding_y = -5,
+#                        foreground = colors[3],
+#                        background = colors[1]
+#                        ),
+#               widget.Sep(
+#                        linewidth = 1,
+#                        padding = 10,
+#                        foreground = colors[2],
+#                        background = colors[1]
+#                        ),
+               widget.WindowName(font="ubuntu mono italic",
+                        fontsize = 20,
                         padding = 400,
                         foreground = colors[3],
                         background = colors[1],
                         ),
                widget.CheckUpdates(
-                       update_interval = 1800,
+                       update_interval = 1000,
                        distro = "Arch_checkupdates",
                        display_format = "{updates} Updates",
                        foreground = colors[6],
@@ -367,11 +374,11 @@ def init_widgets_list():
                         foreground = colors[2],
                         background = colors[1]
                         ),
-               widget.Clock(
+               widget.Clock(font="ubuntu mono italic",
                         foreground = colors[3],
                         background = colors[1],
-                        fontsize = 16,
-                        format="%m/%d/%Y  %H:%M"
+                        fontsize = 20,
+                        format="%m/%d/%Y  %I:%M"
                         ),
                widget.Sep(
                         linewidth = 1,
