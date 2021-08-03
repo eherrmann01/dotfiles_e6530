@@ -5,7 +5,7 @@
 # | |____| |  | |   <  | |__| |  | |  | |  __/ |  | |  | | | | | | (_| | | | | | | |  ____) | |_
 # |______|_|  |_|_|\_\ |_____(_) |_|  |_|\___|_|  |_|  |_| |_| |_|\__,_|_| |_|_| |_| |_____/|_(_)
 
-# Qtile configuration file - updated 07/21/2021
+# Qtile configuration file - updated 08/02/2021
 
 import os
 import re
@@ -361,7 +361,7 @@ def init_widgets_list():
                         background = colors[1],
                         ),
                widget.CheckUpdates(
-                       update_interval = 1000,
+                       update_interval = 500,
                        distro = "Arch_checkupdates",
                        display_format = "{updates} Updates",
                        foreground = colors[6],
