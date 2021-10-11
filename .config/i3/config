@@ -5,7 +5,7 @@
 # | |____| |  | |   <  | |__| |  | |  | |  __/ |  | |  | | | | | | (_| | | | | | | |  ____) | |_   
 # |______|_|  |_|_|\_\ |_____(_) |_|  |_|\___|_|  |_|  |_| |_| |_|\__,_|_| |_|_| |_| |_____/|_(_)  
 
-# i3 configuration file for erik-e6530 - updated 05/14/2021
+# i3 configuration file for erik-e6530 - updated 09/18/2021
 
 
 ## set Super key ##
@@ -324,7 +324,7 @@ bindsym $mod+F3 exec --no-startup-id brave;focus
 bindsym control+mod1+g exec --no-startup-id chromium;focus
 
 # Dolpphin file manager
-bindsym $mod+F2 exec --no-startup-id dolphin;focus
+bindsym $mod+F2 exec --no-startup-id thunar;focus
 
 # Thunderbird mail
 bindsym $mod+F4 exec --no-startup-id thunderbird;focus
