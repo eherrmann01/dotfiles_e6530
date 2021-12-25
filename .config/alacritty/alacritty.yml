@@ -5,7 +5,7 @@
 #  | |____| |  | |   <  | |__| |  | |  | |  __/ |  | |  | | | | | | (_| | | | | | | |  ____) | |_  
 #  |______|_|  |_|_|\_\ |_____(_) |_|  |_|\___|_|  |_|  |_| |_| |_|\__,_|_| |_|_| |_| |_____/|_(_) 
                                                                                                  
-# Alacritty configutration file, updated 05/16/2021
+# Alacritty configutration file, updated 10/16/2021
 
 # ~/.config/alacritty/alacritty.yml
 # Any items in the `env` entry below will be added as
@@ -226,7 +226,8 @@ draw_bold_text_with_bright_colors: true
 colors:
   # Default colors
   primary:
-    background: '0x282c34'
+    background: '0x000000'
+   #background: '0x282c34'
     foreground: '0xbbc2cf'
 
     # Bright and dim foreground colors
@@ -330,7 +331,7 @@ colors:
 #
 # Window opacity as a floating point number from `0.0` to `1.0`.
 # The value `0.0` is completely transparent and `1.0` is opaque.
-background_opacity: 0.95
+background_opacity: 0.80
 
 #selection:
   #semantic_escape_chars: ",?`|:\"' ()[]{}<>\t"

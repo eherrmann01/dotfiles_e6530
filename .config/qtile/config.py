@@ -5,7 +5,7 @@
 # | |____| |  | |   <  | |__| |  | |  | |  __/ |  | |  | | | | | | (_| | | | | | | |  ____) | |_
 # |______|_|  |_|_|\_\ |_____(_) |_|  |_|\___|_|  |_|  |_| |_| |_|\__,_|_| |_|_| |_| |_____/|_(_)
 
-# Qtile configuration file - updated 08/02/2021
+# Qtile configuration file - updated 11/17/2021
 
 import os
 import re
@@ -15,7 +15,7 @@ from libqtile.config import Drag, Key, Screen, Group, Drag, Click, Rule
 from libqtile.command import lazy
 from libqtile import qtile, layout, bar, widget, hook
 from libqtile.widget import Spacer
-#import arcobattery
+import arcobattery
 
 #mod4 or mod = super key
 mod = "mod4"
@@ -293,7 +293,7 @@ layouts = [
 
 # COLORS FOR THE BAR
 def init_colors():
-    return [["#2F343F", "#2F343F"], # color 0
+    return [["#000000", "#000000"], # color 0
             ["#2F343F", "#2F343F"], # color 1
             ["#c0c5ce", "#c0c5ce"], # color 2
             ["#fba922", "#fba922"], # color 3
@@ -333,13 +333,13 @@ def init_widgets_list():
                         highlight_method = "text",
                         this_current_screen_border = colors[4],
                         foreground = colors[2],
-                        background = colors[1]
+                        background = colors[0]
                         ),
                widget.Sep(
                         linewidth = 1,
                         padding = 10,
                         foreground = colors[2],
-                        background = colors[1]
+                        background = colors[0]
                         ),
 #               widget.CurrentLayout(
 #                        font = "Noto Sans",
@@ -358,25 +358,25 @@ def init_widgets_list():
                         fontsize = 20,
                         padding = 400,
                         foreground = colors[3],
-                        background = colors[1],
+                        background = colors[0],
                         ),
                widget.CheckUpdates(
                        update_interval = 500,
                        distro = "Arch_checkupdates",
                        display_format = "{updates} Updates",
                        foreground = colors[6],
-                       background = colors[1],
+                       background = colors[0],
                        mouse_callbacks = {'Button1': lambda: qtile.cmd_spawn(myTerm + ' -e sudo pacman -Syu')},
                        ),
                widget.Sep(
                         linewidth = 1,
                         padding = 10,
                         foreground = colors[2],
-                        background = colors[1]
+                        background = colors[0]
                         ),
                widget.Clock(font="ubuntu mono italic",
                         foreground = colors[3],
-                        background = colors[1],
+                        background = colors[0],
                         fontsize = 20,
                         format="%m/%d/%Y  %I:%M"
                         ),
@@ -384,10 +384,10 @@ def init_widgets_list():
                         linewidth = 1,
                         padding = 10,
                         foreground = colors[2],
-                        background = colors[1]
+                        background = colors[0]
                         ),
                widget.Systray(
-                        background=colors[1],
+                        background=colors[0],
                         icon_size=20,
                         padding = 6
                         ),
@@ -450,32 +450,6 @@ floating_types = ["notification", "toolbar", "splash", "dialog"]
 follow_mouse_focus = True
 bring_front_click = False
 cursor_warp = False
-floating_layout = layout.Floating(float_rules=[
-    {'wmclass': 'Arcolinux-welcome-app.py'},
-    {'wmclass': 'Arcolinux-tweak-tool.py'},
-    {'wmclass': 'confirm'},
-    {'wmclass': 'dialog'},
-    {'wmclass': 'download'},
-    {'wmclass': 'error'},
-    {'wmclass': 'file_progress'},
-    {'wmclass': 'notification'},
-    {'wmclass': 'splash'},
-    {'wmclass': 'toolbar'},
-    {'wmclass': 'confirmreset'},
-    {'wmclass': 'makebranch'},
-    {'wmclass': 'maketag'},
-    {'wmclass': 'Arandr'},
-    {'wmclass': 'feh'},
-    {'wmclass': 'Galculator'},
-    {'wmclass': 'arcolinux-logout'},
-    {'wmclass': 'xfce4-terminal'},
-    {'wmclass': 'redshift-gtk'},
-    {'wname': 'branchdialog'},
-    {'wname': 'Open File'},
-    {'wname': 'pinentry'},
-    {'wmclass': 'ssh-askpass'},
-
-],  fullscreen_border_width = 0, border_width = 0)
 auto_fullscreen = True
 
 focus_on_window_activation = "focus" # or smart
