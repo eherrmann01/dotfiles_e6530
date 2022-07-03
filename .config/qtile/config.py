@@ -13,7 +13,8 @@ import socket
 import subprocess
 from libqtile.config import Drag, Key, Screen, Group, Drag, Click, Rule
 from libqtile.command import lazy
-from libqtile import qtile, layout, bar, widget, hook
+from libqtile import qtile, layout, bar, widget, hook 
+
 from libqtile.widget import Spacer
 import arcobattery
 
@@ -53,7 +54,7 @@ keys = [
     Key([mod], "t", lazy.spawn('urxvt')),
     Key([mod], "v", lazy.spawn('pavucontrol')),
     Key([mod], "w", lazy.spawn('firejail brave')),
-    Key([mod], "x", lazy.spawn('arcolinux-logout')),
+    Key([mod], "x", lazy.spawn('archlinux-logout')),
     Key([mod], "Escape", lazy.spawn('xkill')),
     Key([mod], "Return", lazy.spawn('alacritty')),
     Key([mod], "KP_Enter", lazy.spawn('alacritty')),
@@ -277,6 +278,10 @@ def init_layout_theme():
 #            "border_focus": "#cd1f3f",
             "border_normal": "#4c566a"
             }
+@hook.subscribe.client_new
+def func(c):
+    if c.name == "Discord":
+        c.togroup("0")
 
 layout_theme = init_layout_theme()
 

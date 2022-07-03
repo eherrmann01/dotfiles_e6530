@@ -224,6 +224,9 @@ exec --no-startup-id i3-msg exec 'nitrogen --restore'
 #Start Barrier - EDH
 exec --no-startup-id i3-msg 'workspace 1; exec /usr/bin/barrier'
 
+#Start Discord
+exec --no-startup-id exec '/usr/bin/discord'
+
 # Autotiling
 exec_always --no-startup-id autotiling
 

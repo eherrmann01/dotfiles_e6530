@@ -5,7 +5,7 @@
 #  | |____| |  | |   <  | |__| |  | |  | |  __/ |  | |  | | | | | | (_| | | | | | | |  ____) | |_  
 #  |______|_|  |_|_|\_\ |_____(_) |_|  |_|\___|_|  |_|  |_| |_| |_|\__,_|_| |_|_| |_| |_____/|_(_) 
                                                                                                  
-# Alacritty configutration file, updated 10/16/2021
+# Alacritty configutration file, updated 01/27/2022
 
 # ~/.config/alacritty/alacritty.yml
 # Any items in the `env` entry below will be added as
@@ -331,7 +331,9 @@ colors:
 #
 # Window opacity as a floating point number from `0.0` to `1.0`.
 # The value `0.0` is completely transparent and `1.0` is opaque.
-background_opacity: 0.80
+# background_opacity: 0.80
+window:
+ opacity: 0.90
 
 #selection:
   #semantic_escape_chars: ",?`|:\"' ()[]{}<>\t"

@@ -6,7 +6,7 @@
 #  | |____| |  | |   <  | |__| |  | |  | |  __/ |  | |  | | | | | | (_| | | | | | | |  ____) | |_  
 #  |______|_|  |_|_|\_\ |_____(_) |_|  |_|\___|_|  |_|  |_| |_| |_|\__,_|_| |_|_| |_| |_____/|_(_) 
                                                                                                  
-# Imwheel configuration file, updated 09/28/2021
+# Imwheel configuration file, updated 01/28/2022
 
 # ~/.imwheelrc 
 # This file sets mouse wheel speed for various programs
@@ -48,8 +48,8 @@ Shift_L,   Up,   Shift_L|Button4
 Shift_L,   Down, Shift_L|Button5
 
 "^Mail$"
-None,      Up,   Button4, 3 
-None,      Down, Button5, 3 
+None,      Up,   Button4, 1 
+None,      Down, Button5, 1 
 Control_L, Up,   Control_L|Button4
 Control_L, Down, Control_L|Button5
 Shift_L,   Up,   Shift_L|Button4

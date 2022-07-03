@@ -48,10 +48,11 @@ picom --config $HOME/.config/qtile/scripts/picom.conf &
 run volumeicon &
 run ~/bin/run_scripts/nightrc &
 run protonmail-bridge --no-window &
+run discord &
 run thunderbird &
 run ~/mousefix.sh &
 run barrier &
-#run discord &
+run unclutter --timeout 3 &
 run nitrogen --restore &
 #run caffeine -a &
 #run vivaldi-stable &
