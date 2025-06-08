@@ -1,0 +1,49 @@
+
+#!/bin/sh
+
+IMAGE=$1
+CONFIG="$HOME/.config/nitrogen/bg-saved.cfg"
+BACKUP="$CONFIG.bak"
+
+#  Prompt user for display mode
+echo "Please choose wallpaper mode"
+echo "1) Automatic"
+echo "2) Scaled"
+echo "3) Centered"
+echo "4) Tiled"
+echo "5) Zoomed"
+echo "6) Zoomed Fill"
+read -p "Enter Number (1-6)" MODE_CHOICE
+
+# Map input to Nitrogen mode numbers
+case $MODE_CHOICE in
+    1) MODE=0; MODE_NAME="Automatic" ;;
+    2) MODE=1; MODE_NAME="Scaled" ;;
+    3) MODE=2; MODE_NAME="Centered" ;;
+    4) MODE=3; MODE_NAME="Tiled" ;;
+    5) MODE=4; MODE_NAME="Zoomed" ;;
+    6) MODE=5; MODE_NAME="Zoomed Fill" ;;
+    *) echo "Invalid choicem Exiting."; exit 1 ;;
+esac
+
+echo "IMAGE: $IMAGE"
+echo "MODE: $MODE ($MODE_NAME)"
+echo "CONFIG: $CONFIG"
+echo "BACKUP: $BACKUP"
+
+# Backup current config
+cp "$CONFIG" "$BACKUP"
+
+# Write config based on mode
+cat > "$CONFIG" <<EOF
+[xin_-1]
+file=$IMAGE
+mode=$MODE
+bgcolor=#000000
+EOF
+
+nitrogen --restore
+notify-send "Wallpaper set" "$MODE: $IMAGE"
+
+exit 0
+
