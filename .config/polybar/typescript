@@ -1,0 +1,137 @@
+Script started on 2025-05-09 18:14:03-05:00 [TERM="xterm-kitty" TTY="/dev/pts/0" COLUMNS="143" LINES="39"]
+[1m[36m                  -`
+                 .o+`
+                `ooo/
+               `+oooo:
+              `+oooooo:
+              -+oooooo+:
+            `/:-:++oooo+:
+           `/++++/+++++++:
+          `/++++++++++++++:
+         `/+++o[36moooooooo[36moooo/`
+        ./[36mooosssso++osssssso[36m+`
+[36m       .oossssso-````/ossssss+`
+      -osssssso.      :ssssssso.
+     :osssssss/        osssso+++.
+    /ossssssss/        +ssssooo/-
+  `/ossssso+/:-        -:/+osssso+-
+ `+sso+:-`                 `.-/+oso:
+`++:.                           `-/+/
+.`                                 `/[m[1G[18A[m[?7l[41C[m[1m[36merik[m@[1m[36merik-e6530[m
+[41C---------------
+[41C[m[1m[36mOS[m: [mArch Linux x86_64
+[41C[m[1m[36mHost[m: [mLatitude E6530 (01)
+[41C[m[1m[36mKernel[m: [mLinux 6.14.5-arch1-1
+[41C[m[1m[36mUptime[m: [m2 mins
+[41C[m[1m[36mPackages[m: [m2086 (pacman), 5 (flatpak-system), 1 (flatpak-user)
+[41C[m[1m[36mShell[m: [mzsh 5.9
+[41C[m[1m[36mWM[m: [mi3 (X11)
+[41C[m[1m[36mTheme[m: [mArcDark [Qt], Arc-Dark [GTK2/3]
+[41C[m[1m[36mIcons[m: [marcolinux-candy-beauty [Qt], a-candy-beauty-icon-theme [GTK2/3]
+[41C[m[1m[36mFont[m: [mqt5ct [Qt], Noto Sans (11pt) [GTK2/3]
+[41C[m[1m[36mCursor[m: [mAdwaita
+[41C[m[1m[36mTerminal[m: [mscript
+[41C[m[1m[36mCPU[m: [mIntel(R) Core(TM) i5-3320M (4) @ 3.30 GHz
+[41C[m[1m[36mGPU 1[m: [mNVIDIA NVS 5200M
+[41C[m[1m[36mGPU 2[m: [mIntel 3rd Gen Core processor Graphics Controller @ 1.20 GHz [Integrated]
+[41C[m[1m[36mMemory[m: [m1.33 GiB / 7.62 GiB ([32m17%[m)
+[41C[m[1m[36mSwap[m: [mDisabled
+[41C[m[1m[36mDisk (]8;;file:///\/]8;;\)[m: [m48.59 GiB / 71.54 GiB ([93m68%[m) - ext4
+[41C[m[1m[36mDisk (]8;;file:///home\/home]8;;\)[m: [m52.98 GiB / 138.74 GiB ([32m38%[m) - ext4
+[41C[m[1m[36mDisk (]8;;file:///mnt/storage\/mnt/storage]8;;\)[m: [m243.66 GiB / 915.82 GiB ([32m27%[m) - ext4
+[41C[m[1m[36mDisk (]8;;file:///swap\/swap]8;;\)[m: [m24.00 KiB / 7.59 GiB ([32m0%[m) - ext4
+[41C[m[1m[36mLocal IP (eno1)[m: [m192.168.0.137/24
+[?7h[1m[7m%[27m[1m[0m                                                                                                                                               ]2;erik@erik-e6530:~/.config/polybar]1;..onfig/polybar]7;file://erik-e6530/home/erik/.config/polybar\[0m[27m[24m[J[34m┌[[01;37merik[00m[34m@[01;37merik-e6530[00m[34m] [[01;37m/dev/pts/1[00m[34m] 
+[34m└[[01;37m~/.config/polybar[00m[34m]>[00m [K[?1h[?2004hscript[32ms[32mc[32mr[32mi[32mp[32mt[39m[32mp[39m[39m [39m[4ms[39m[4mc[39m[4mr[39m[4mi[39m[4mp[24m[90mt[39m[4mi[24m[24m[90mt[39m[39m [24ms[24mc[24mr[24mi [39m [4ms[4mc[4mr[24m[90mipt[39m[4ms[4mc[24m[24m [39m [39m [39m [90mript[39m[4ms[24m[24m [39m [39m [39m [39m [4ms[24m[90mcript[39m[24m [39m [39m [39m [39m [39m l[32ml[39m[32ml[39m[90ml[39m[32ml[32ml[39m[?1l[?2004l
+]2;ls --color=auto -la]1;lltotal 68
+drwxr-xr-x   3 erik erik  4096 May  9 18:14 [0m[01;34m.[0m
+drwxr-x--- 127 erik erik  4096 Apr 12 11:56 [01;34m..[0m
+-rwxr-xr-x   1 erik erik 34815 May  9 18:13 [01;32mconfig.ini[0m
+-rwxr-xr-x   1 erik erik  4164 May  9  2022 [01;32mconfig.ini.oem[0m
+-rwxr-xr-x   1 erik erik   579 Jan 20  2023 [01;32mlaunch.sh[0m
+-rwxr-xr-x   1 erik erik  5810 Jan 20  2023 [01;32mlaunch.sh.bak[0m
+drwxr-xr-x   2 erik erik  4096 Sep 11  2024 [01;34mscripts[0m
+-rw-r--r--   1 erik erik     0 May  9 18:14 typescript
+[1m[7m%[27m[1m[0m                                                                                                                                               ]2;erik@erik-e6530:~/.config/polybar]1;..onfig/polybar]7;file://erik-e6530/home/erik/.config/polybar\[0m[27m[24m[J[34m┌[[01;37merik[00m[34m@[01;37merik-e6530[00m[34m] [[01;37m/dev/pts/1[00m[34m] 
+[34m└[[01;37m~/.config/polybar[00m[34m]>[00m [K[?1h[?2004hc[4mc[24m[4mc[24m[90mhmod +x kittyrc[39m[15D[4mc[39m[4md[24m[39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [14D[24m[32mc[24m[32md[39m[90m bin/scripts/run_scripts[39m[24D[32mc[39m[39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [25D[39m[4mc[24m[4mc[24m[90mhmod +x kittyrc[39m[15D[24m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [16Dl[32ml[39m[32ml[39m[90ml[39m[32ml[32ma[39m[32ml[32ma[32mu[39m[39m[4ml[39m[4ma[39m[4mu[24m[4mu[4mn[24m[4mn[4mc[24m[4mc[4mh[24m[24ml[24ma[24mu[24mn[24mc[24mh
+[0mdbus-broker-launch   gst-launch-1.0       _gtk-launch          kpackagelauncherqml  timeshift-launcher                      
+[Jdbus-launch          [Jgtk4-launch          [Jgtk-launch           [Jseatd-launch         [J                                      [A[A[0m[27m[24m[22Claunch[K[4ml[4ma[4mu[4mn[4mc[4mh[24m[24m[32md[24m[32mb[24m[32mu[24m[32ms[24m[32m-[24m[32mb[32mroker-launch[39m
+[7mdbus-broker-launch [0m  gst-launch-1.0       _gtk-launch          kpackagelauncherqml  timeshift-launcher                      [K
+[Jdbus-launch          [Jgtk4-launch          [Jgtk-launch           [Jseatd-launch         [J                                      [A[A[0m[27m[24m[22C[32mdbus-broker-launch[39m[K
+[7mdbus-broker-launch [0m  [7mdbus-broker-launch [0m  [A[0m[27m[24m[22C[32mdbus-broker-launch[39m[K[13D[32ml[32ma[32mu[32mn[32mc[32mh[39m[39m [39m [39m [39m [39m [39m [39m 
+[0mdbus-broker-launch   [1B[7mdbus-launch        [0m  [A[A[0m[27m[24m[22C[32mdbus-launch[39m[K[11D[32mg[32ms[32mt[32m-[32ml[32ma[32mu[32mn[32mc[32mh[32m-[32m1.0[39m
+[21C[7mgst-launch-1.0     [0m  [1Bdbus-launch          [A[A[0m[27m[24m[22C[32mgst-launch-1.0[39m[K[14D[32mg[32mt[32mk[32m4[32m-[32ml[32ma[32mu[32mn[32mc[32mh[39m[39m [39m [39m 
+[21C[0mgst-launch-1.0       [1B[21C[7mgtk4-launch        [0m  [A[A[0m[27m[24m[22C[32mgtk4-launch[39m[K[11D[32m_[32mg[32mt[32mk[7C[39m
+[42C[7m_gtk-launch        [0m  [1B[21Cgtk4-launch          [A[A[0m[27m[24m[22C[32m_gtk-launch[39m[K[11D[P[10C 
+[42C[0m_gtk-launch          [1B[42C[7mgtk-launch         [0m  [A[A[0m[27m[24m[22C[32mgtk-launch[39m[K[10D[32mk[32mp[32ma[32mc[32mk[32ma[32mg[32me[32ml[32ma[32muncherqml[39m
+[63C[7mkpackagelauncherqml[0m  [1B[42Cgtk-launch           [A[A[0m[27m[24m[22C[32mkpackagelauncherqml[39m[K[19D[32ms[32me[32ma[32mt[32md[32m-[32ml[32ma[32mu[32mn[32mc[32mh[39m[39m [39m [39m [39m [39m [39m [39m 
+[63C[0mkpackagelauncherqml  [1B[63C[7mseatd-launch       [0m[A[A[0m[27m[24m[22C[32mseatd-launch[39m[K[12D[32mt[32mi[32mm[32me[32ms[32mh[32mi[32mf[32mt[32m-[32ml[32ma[32muncher[39m
+[84C[7mtimeshift-launcher [0m[1B[63Cseatd-launch       [A[A[0m[27m[24m[22C[32mtimeshift-launcher[39m[K[18D[32md[32mb[32mu[32ms[32m-[32mb[32mr[32mo[32mk[32me[32mr[32m-[32ml[32ma[32mu[32mn[32mc[32mh[39m
+[7mdbus-broker-launch [0m  [84Ctimeshift-launcher [A[0m[27m[24m[22C[32mdbus-broker-launch[39m[K[13D[32ml[32ma[32mu[32mn[32mc[32mh[39m[39m [39m [39m [39m [39m [39m [39m 
+[0mdbus-broker-launch   [1B[7mdbus-launch        [0m  [A[A[0m[27m[24m[22C[32mdbus-launch[39m[K[11D[32mg[32ms[32mt[32m-[32ml[32ma[32mu[32mn[32mc[32mh[32m-[32m1.0[39m
+[21C[7mgst-launch-1.0     [0m  [1Bdbus-launch          [A[A[0m[27m[24m[22C[32mgst-launch-1.0[39m[K[14D[32mg[32mt[32mk[32m4[32m-[32ml[32ma[32mu[32mn[32mc[32mh[39m[39m [39m [39m 
+[21C[0mgst-launch-1.0       [1B[21C[7mgtk4-launch        [0m  [A[A[0m[27m[24m[22C[32mgtk4-launch[39m[K[11D[32m_[32mg[32mt[32mk[7C[39m
+[42C[7m_gtk-launch        [0m  [1B[21Cgtk4-launch          [A[A[0m[27m[24m[22C[32m_gtk-launch[39m[K[11D[P[10C 
+[42C[0m_gtk-launch          [1B[42C[7mgtk-launch         [0m  [A[A[0m[27m[24m[22C[32mgtk-launch[39m[K[10D[32mk[32mp[32ma[32mc[32mk[32ma[32mg[32me[32ml[32ma[32muncherqml[39m
+[63C[7mkpackagelauncherqml[0m  [1B[42Cgtk-launch           [A[A[0m[27m[24m[22C[32mkpackagelauncherqml[39m[K[19D[32ms[32me[32ma[32mt[32md[32m-[32ml[32ma[32mu[32mn[32mc[32mh[39m[39m [39m [39m [39m [39m [39m [39m 
+[63C[0mkpackagelauncherqml  [1B[63C[7mseatd-launch       [0m[A[A[0m[27m[24m[22C[32mseatd-launch[39m[K[12D[32mt[32mi[32mm[32me[32ms[32mh[32mi[32mf[32mt[32m-[32ml[32ma[32muncher[39m
+[84C[7mtimeshift-launcher [0m[1B[63Cseatd-launch       [A[A[0m[27m[24m[22C[32mtimeshift-launcher[39m[K[18D[32md[32mb[32mu[32ms[32m-[32mb[32mr[32mo[32mk[32me[32mr[32m-[32ml[32ma[32mu[32mn[32mc[32mh[39m
+[7mdbus-broker-launch [0m  [84Ctimeshift-launcher [A[0m[27m[24m[22C[32mdbus-broker-launch[39m[K[13D[32ml[32ma[32mu[32mn[32mc[32mh[39m[39m [39m [39m [39m [39m [39m [39m 
+[0mdbus-broker-launch   [1B[7mdbus-launch        [0m  [A[A[0m[27m[24m[22C[32mdbus-launch[39m[K[11D[32mg[32ms[32mt[32m-[32ml[32ma[32mu[32mn[32mc[32mh[32m-[32m1.0[39m
+[21C[7mgst-launch-1.0     [0m  [1Bdbus-launch          [A[A[0m[27m[24m[22C[32mgst-launch-1.0[39m[K[14D[32mg[32mt[32mk[32m4[32m-[32ml[32ma[32mu[32mn[32mc[32mh[39m[39m [39m [39m 
+[21C[0mgst-launch-1.0       [1B[21C[7mgtk4-launch        [0m  [A[A[0m[27m[24m[22C[32mgtk4-launch[39m[K[11D[32m_[32mg[32mt[32mk[7C[39m
+[42C[7m_gtk-launch        [0m  [1B[21Cgtk4-launch          [A[A[0m[27m[24m[22C[32m_gtk-launch[39m[K[11D[P[10C 
+[42C[0m_gtk-launch          [1B[42C[7mgtk-launch         [0m  [A[A[0m[27m[24m[22C[32mgtk-launch[39m[K[10D[32mk[32mp[32ma[32mc[32mk[32ma[32mg[32me[32ml[32ma[32muncherqml[39m
+[63C[7mkpackagelauncherqml[0m  [1B[42Cgtk-launch           [A[A[0m[27m[24m[22C[32mkpackagelauncherqml[39m[K[19D[32ms[32me[32ma[32mt[32md[32m-[32ml[32ma[32mu[32mn[32mc[32mh[39m[39m [39m [39m [39m [39m [39m [39m 
+[63C[0mkpackagelauncherqml  [1B[63C[7mseatd-launch       [0m[A[A[0m[27m[24m[22C[32mseatd-launch[39m[K[12D[32mt[32mi[32mm[32me[32ms[32mh[32mi[32mf[32mt[32m-[32ml[32ma[32muncher[39m
+[84C[7mtimeshift-launcher [0m[1B[63Cseatd-launch       [A[A[0m[27m[24m[22C[32mtimeshift-launcher[39m[K[18D[32md[32mb[32mu[32ms[32m-[32mb[32mr[32mo[32mk[32me[32mr[32m-[32ml[32ma[32mu[32mn[32mc[32mh[39m
+[7mdbus-broker-launch [0m  [84Ctimeshift-launcher [A[0m[27m[24m[22C[32mdbus-broker-launch[39m[K[13D[32ml[32ma[32mu[32mn[32mc[32mh[39m[39m [39m [39m [39m [39m [39m [39m 
+[0mdbus-broker-launch   [1B[7mdbus-launch        [0m  [A[A[0m[27m[24m[22C[32mdbus-launch[39m[K[11D[32mg[32ms[32mt[32m-[32ml[32ma[32mu[32mn[32mc[32mh[32m-[32m1.0[39m
+[21C[7mgst-launch-1.0     [0m  [1Bdbus-launch          [A[A[0m[27m[24m[22C[32mgst-launch-1.0[39m[K[14D[32mg[32mt[32mk[32m4[32m-[32ml[32ma[32mu[32mn[32mc[32mh[39m[39m [39m [39m 
+[21C[0mgst-launch-1.0       [1B[21C[7mgtk4-launch        [0m  [A[A[0m[27m[24m[22C[32mgtk4-launch[39m[K[11D[32m_[32mg[32mt[32mk[7C[39m
+[42C[7m_gtk-launch        [0m  [1B[21Cgtk4-launch          [A[A[0m[27m[24m[22C[32m_gtk-launch[39m[K[11D[P[10C 
+[42C[0m_gtk-launch          [1B[42C[7mgtk-launch         [0m  [A[A[0m[27m[24m[22C[32mgtk-launch[39m[K[10D[32mk[32mp[32ma[32mc[32mk[32ma[32mg[32me[32ml[32ma[32muncherqml[39m
+[63C[7mkpackagelauncherqml[0m  [1B[42Cgtk-launch           [A[A[0m[27m[24m[22C[32mkpackagelauncherqml[39m[K[19D[32ms[32me[32ma[32mt[32md[32m-[32ml[32ma[32mu[32mn[32mc[32mh[39m[39m [39m [39m [39m [39m [39m [39m 
+[63C[0mkpackagelauncherqml  [1B[63C[7mseatd-launch       [0m[A[A[0m[27m[24m[22C[32mseatd-launch[39m[K[12D[32mt[32mi[32mm[32me[32ms[32mh[32mi[32mf[32mt[32m-[32ml[32ma[32muncher[39m
+[84C[7mtimeshift-launcher [0m[1B[63Cseatd-launch       [A[A[0m[27m[24m[22C[32mtimeshift-launcher[39m[K[18D[32md[32mb[32mu[32ms[32m-[32mb[32mr[32mo[32mk[32me[32mr[32m-[32ml[32ma[32mu[32mn[32mc[32mh[39m
+[7mdbus-broker-launch [0m  [84Ctimeshift-launcher [A[0m[27m[24m[22C[32mdbus-broker-launch[39m[K[13D[32ml[32ma[32mu[32mn[32mc[32mh[39m[39m [39m [39m [39m [39m [39m [39m 
+[0mdbus-broker-launch   [1B[7mdbus-launch        [0m  [A[A[0m[27m[24m[22C[32mdbus-launch[39m[K[11D[32mg[32ms[32mt[32m-[32ml[32ma[32mu[32mn[32mc[32mh[32m-[32m1.0[39m
+[21C[7mgst-launch-1.0     [0m  [1Bdbus-launch          [A[A[0m[27m[24m[22C[32mgst-launch-1.0[39m[K[14D[32mg[32mt[32mk[32m4[32m-[32ml[32ma[32mu[32mn[32mc[32mh[39m[39m [39m [39m 
+[21C[0mgst-launch-1.0       [1B[21C[7mgtk4-launch        [0m  [A[A[0m[27m[24m[22C[32mgtk4-launch[39m[K[11D[32m_[32mg[32mt[32mk[7C[39m
+[42C[7m_gtk-launch        [0m  [1B[21Cgtk4-launch          [A[A[0m[27m[24m[22C[32m_gtk-launch[39m[K[11D[P[10C 
+[42C[0m_gtk-launch          [1B[42C[7mgtk-launch         [0m  [A[A[0m[27m[24m[22C[32mgtk-launch[39m[K[10D[32mk[32mp[32ma[32mc[32mk[32ma[32mg[32me[32ml[32ma[32muncherqml[39m
+[63C[7mkpackagelauncherqml[0m  [1B[42Cgtk-launch           [A[A[0m[27m[24m[22C[32mkpackagelauncherqml[39m[K[19D[32ms[32me[32ma[32mt[32md[32m-[32ml[32ma[32mu[32mn[32mc[32mh[39m[39m [39m [39m [39m [39m [39m [39m 
+[63C[0mkpackagelauncherqml  [1B[63C[7mseatd-launch       [0m[A[A[0m[27m[24m[22C[32mseatd-launch[39m[K[12D[32mt[32mi[32mm[32me[32ms[32mh[32mi[32mf[32mt[32m-[32ml[32ma[32muncher[39m
+[84C[7mtimeshift-launcher [0m[1B[63Cseatd-launch       [A[A[0m[27m[24m[22C[32mtimeshift-launcher[39m[K[18D[32md[32mb[32mu[32ms[32m-[32mb[32mr[32mo[32mk[32me[32mr[32m-[32ml[32ma[32mu[32mn[32mc[32mh[39m
+[7mdbus-broker-launch [0m  [84Ctimeshift-launcher [A[0m[27m[24m[22C[32mdbus-broker-launch[39m[K[13D[32ml[32ma[32mu[32mn[32mc[32mh[39m[39m [39m [39m [39m [39m [39m [39m 
+[0mdbus-broker-launch   [1B[7mdbus-launch        [0m  [A[A[0m[27m[24m[22C[32mdbus-launch[39m[K
+[J[A[33C[11D[39md[39mb[39mu[39ms[39m-[39ml[39ma[39mu[39mn[39mc[39mh[1m [0m[0m [11D[32md[32mb[32mu[32ms[32m-[32ml[32ma[32mu[32mn[32mc[32mh[39m[32mc[39m[39m [10D[1m[31md[1m[31mb[1m[31mu[1m[31ms[1m[31m-[1m[31ml[1m[31ma[1m[31mu[1m[31mn[1m[31mc[0m[39m[1m[31mn[0m[39m[0m[39m [1m[31mu[0m[39m[0m[39m [1m[31ma[0m[39m[0m[39m [1m[31ml[0m[39m[0m[39m [1m[31m-[0m[39m[0m[39m [1m[31ms[0m[39m[0m[39m [1m[31mu[0m[39m[0m[39m [1m[31md[1m[31mb[0m[39m[0m[39m [1m[31md[0m[39m[0m[39m [0m[32md[39m[32md[39m[90mi[39m[39m [39m .[32m.[39m[32m.[39m[90mconfig/polybar[39m[14D[32m.[32m/[39m[39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [13D[4m[32m.[4m[32m/[24m[39m[90mxmenudm.sh[39m[10D[4m[32m.[4m[32m/[4m[32ml[24m[39m[39m [39m [39m [39m [39m [39m [39m [39m [39m [9D[39m[4m.[39m[4m/[39m[4ml[24m[90maunch.sh[39m[8D[4ml[39m[4ma[24m[39mu[39mn[39mc[39mh[39m.[39ms[39mh[11D[24m[32m.[24m[32m/[24m[32ml[24m[32ma[32mu[32mn[32mc[32mh[32m.[32ms[32mh[39m[?1l[?2004l
+[J]2;./launch.sh]1;./launch.sh./launch.sh: line 18: syntax error near unexpected token `esac'
+./launch.sh: line 18: ` esac'
+[1m[7m%[27m[1m[0m                                                                                                                                               ]2;erik@erik-e6530:~/.config/polybar]1;..onfig/polybar]7;file://erik-e6530/home/erik/.config/polybar\[1;34mnotice: [0mParsing config file: /home/erik/.config/polybar/config.ini[0m
+[1;34mnotice: [0mListening for IPC messages (PID: 1648)[0m
+[1;34mnotice: [0mLoading module 'i3' of type 'internal/i3'[0m
+[0m[27m[24m[J[34m┌[[01;37merik[00m[34m@[01;37merik-e6530[00m[34m] [[01;37m/dev/pts/1[00m[34m] [34m[[01;37m2[00m[34m]
+[34m└[[01;37m~/.config/polybar[00m[34m]>[00m [K[?1h[?2004h[1;34mnotice: [0mLoading module 'xwindow' of type 'internal/xwindow'[0m
+[1;34mnotice: [0mLoading module 'date' of type 'internal/date'[0m
+[1;34mnotice: [0mLoading module 'weather' of type 'custom/script'[0m
+[1;34mnotice: [0mLoaded 4 modules[0m
+[1;34mnotice: [0mLoaded font "Noto Sans:size=10" (name=Noto Sans, offset=0, file=/usr/share/fonts/noto/NotoSans-Regular.ttf)[0m
+[1;34mnotice: [0mLoaded font "FontAwesome:size=10" (name=FontAwesome, offset=0, file=/usr/share/fonts/awesome-terminal-fonts/fontawesome-regular.ttf)[0m
+[1;34mnotice: [0mLoaded font "Noto Sans:size=10" (name=Noto Sans, offset=0, file=/usr/share/fonts/noto/NotoSans-Regular.ttf)[0m
+[1;34mnotice: [0mLoaded font "Noto Sans Mono:size=10" (name=Noto Sans Mono, offset=0, file=/usr/share/fonts/noto/NotoSansMono-Regular.ttf)[0m
+[1;33mwarn: [0mtray: bar/mainbar-i3.tray-position is deprecated, use the dedicated tray module to display the system tray[0m
+[1;33mwarn: [0mtray: bar/mainbar-i3.tray-detached is deprecated, use the dedicated tray module to display the system tray[0m
+[1;33mwarn: [0mtray: bar/mainbar-i3.tray-maxsize is deprecated, use the dedicated tray module to display the system tray[0m
+[1;33mwarn: [0mtray: bar/mainbar-i3.tray-scale is deprecated, use the dedicated tray module to display the system tray[0m
+[1;33mwarn: [0mtray: bar/mainbar-i3.tray-background is deprecated, use the dedicated tray module to display the system tray[0m
+[1;33mwarn: [0mtray: bar/mainbar-i3.tray-padding is deprecated, use the dedicated tray module to display the system tray[0m
+[1;33mwarn: [0mtray: bar/mainbar-i3.tray-offset-x is deprecated, use the dedicated tray module to display the system tray[0m
+[1;33mwarn: [0mtray: bar/mainbar-i3.tray-offset-y is deprecated, use the dedicated tray module to display the system tray[0m
+[1;31merror: [0mtray: Failed to put tray above 0x2c00002 in the stack (XCB_MATCH (8))[0m
+[A[0m[27m[24m[J[34m┌[[01;37merik[00m[34m@[01;37merik-e6530[00m[34m] [[01;37m/dev/pts/1[00m[34m] [34m[[01;37m2[00m[34m]
+[34m└[[01;37m~/.config/polybar[00m[34m]>[00m [1;31merror: [0mbackground_manager: Root pixmap does not fully cover transparent areas. Pseudo-transparency may not fully work and instead just show a black background. Make sure you have a wallpaper set on all of your screens[0m
+[1;31merror: [0mbackground_manager: Root pixmap does not fully cover transparent areas. Pseudo-transparency may not fully work and instead just show a black background. Make sure you have a wallpaper set on all of your screens[0m
+:[32m:[39m[32m:[39m[90mq[39m[32m:[32mq[39m[?1l[?2004l
+]2;exit]1;:q
+Script done on 2025-05-09 18:14:41-05:00 [COMMAND_EXIT_CODE="2"]
