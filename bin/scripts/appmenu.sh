@@ -6,7 +6,7 @@
 # | |____| |  | |   <  | |__| |  | |  | |  __/ |  | |  | | | | | | (_| | | | | | | |  ____) | |_
 # |______|_|  |_|_|\_\ |_____(_) |_|  |_|\___|_|  |_|  |_| |_| |_|\__,_|_| |_|_| |_| |_____/|_(_)
 
-# Application launcher using Rofi - updated 05/16/2025
+# Application launcher using Rofi - updated 06/20/2025
 # ~/bin/scripts/xmenudm.sh
 
 DMENU="rofi -dmenu -i -matching fuzzy -sorting-method fzf -theme ~/.config/rofi/themes/appmenu.rasi"
@@ -201,6 +201,7 @@ Chrome\n\
 Firefox\n\
 Mail\n\
 Protonmail Bridge\n\
+Zen Browser\n\
 Back\n" | $DMENU)
         case "$choice" in 
             "Brave") exec brave ;;
@@ -208,6 +209,7 @@ Back\n" | $DMENU)
             "Firefox") exec firefox ;;
             "Mail") exec thunderbird ;;
             "ProtonMail Bridge") exec /usr/sbin/protonmail-bridge ;;
+            "Zen Browser") exec /usr/sbin/zen-browser ;;
             "Back") exec "$0" ;;
         esac
         ;;

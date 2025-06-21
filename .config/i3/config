@@ -214,7 +214,7 @@ exec_always --no-startup-id ~/.config/polybar/launch.sh &
 # Mousefix
 exec_always --no-startup-id ~/mousefix.sh &
 # Redshift
-exec_always --no-startup-id ~/bin/scripts/run_scripts/nightrc &
+exec_always --no-startup-id ~/bin/scripts/edit_scripts/nightrc &
 
 ## System applications ## 
 exec --no-startup-id xfce4-power-manager &
