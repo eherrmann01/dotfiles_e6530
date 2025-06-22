@@ -5,7 +5,7 @@
 # | |____| |  | |   <  | |__| |  | |  | |  __/ |  | |  | | | | | | (_| | | | | | | |  ____) | |_   
 # |______|_|  |_|_|\_\ |_____(_) |_|  |_|\___|_|  |_|  |_| |_| |_|\__,_|_| |_|_| |_| |_____/|_(_)  
 
-# i3 configuration file for erik-e6530 - updated 06/05/2025
+# i3 configuration file for erik-e6530 - updated 06/21/2025
 # ~/.config/i3/config
 
 ## set Super key ##
@@ -255,8 +255,8 @@ bindsym --release $mod+Escape exec xkill
 # Firefox
 bindsym $mod+F1 exec --no-startup-id exo-open --launch webbrowser;focus
 # Brave
-bindsym $mod+F3 exec --no-startup-id zen-browser;focus
-bindsym $mod+w exec --no-startup-id brave;focus
+bindsym $mod+F3 exec --no-startup-id brave;focus
+bindsym $mod+w exec --no-startup-id /usr/sbin/zen-browser;focus
 # Chromium
 bindsym control+mod1+g exec --no-startup-id chromium;focus
 # Dolpphin file manager
