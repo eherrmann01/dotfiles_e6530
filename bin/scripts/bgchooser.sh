@@ -12,6 +12,7 @@
 IMAGE=$1
 CONFIG="$HOME/.config/nitrogen/bg-saved.cfg"
 BACKUP="$CONFIG.bak"
+export GTK_THEME=Arc-Dark
 
 # Use zenity for a GUI dropdown menu
 MODE_NAME=$(zenity --list --title="Choose Wallpaper Mode" \
