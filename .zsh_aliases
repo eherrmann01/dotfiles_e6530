@@ -65,6 +65,9 @@ alias wacom='xsetwacom --set "14" area 0 0 3040 2050'
 
 # Config for git_dotfile_repo
 alias gg='/usr/bin/git --git-dir=$HOME/dotfiles_e6530/ --work-tree=$HOME'
+alias ggs='gg status'
+alias gga='gg add -u'
+alias ggp='gg push'
 
 # Redshift
 alias night='redshift-gtk -l 30.47741:-90.96232 &'

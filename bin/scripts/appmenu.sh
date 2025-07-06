@@ -80,7 +80,7 @@ Vimrc\n\
 Xfce\n\
 Xmenu\n\
 Zsh\n\
-ZSH Aliases\n\
+Zsh Aliases\n\
 Back\n" | $DMENU)
 
     case "$choice" in 
