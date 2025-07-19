@@ -5,7 +5,7 @@
 # | |____| |  | |   <  | |__| |  | |  | |  __/ |  | |  | | | | | | (_| | | | | | | |  ____) | |_   
 # |______|_|  |_|_|\_\ |_____(_) |_|  |_|\___|_|  |_|  |_| |_| |_|\__,_|_| |_|_| |_| |_____/|_(_)  
 
-# i3 configuration file for erik-e6530 - updated 06/30/2025
+# i3 configuration file for erik-e6530 - updated 07/19/2025
 # ~/.config/i3/config
 
 ## set Super key ##
@@ -202,9 +202,6 @@ exec --no-startup-id blueberry-tray
 exec --no-startup-id nm-applet
 # Num lock activated
 exec_always --no-startup-id numlockx on
-# Volume
-exec_always --no-startup-id /usr/bin/pasystray
-#exec --no-startup-id volumeicon
 # Clipman
 exec --no-startup-id xfce4-clipman
 # Protonmail
