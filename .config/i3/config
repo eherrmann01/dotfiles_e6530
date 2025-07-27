@@ -254,8 +254,8 @@ bindsym control+shift+k exec --no-startup-id /usr/bin/keepassxc
 # Firefox
 bindsym $mod+F1 exec --no-startup-id exo-open --launch webbrowser;focus
 # Brave
-bindsym $mod+F3 exec --no-startup-id brave;focus
-bindsym $mod+w exec --no-startup-id /usr/sbin/zen-browser;focus
+bindsym $mod+F3 exec --no-startup-id zen-browsaer;focus
+bindsym $mod+w exec --no-startup-id /usr/sbin/brave;focus
 # Chromium
 bindsym control+mod1+g exec --no-startup-id chromium;focus
 # Dolpphin file manager
